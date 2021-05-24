@@ -7,11 +7,14 @@ create table account (account_id bigint not null, account_name varchar(255), acc
 create table transaction (id bigint not null, description varchar(255), direction integer, receiver_account_number varchar(255), sender_account_number varchar(255), transaction_amount numeric(19,2), transaction_date_time timestamp, transaction_id bigint, account_number bigint, primary key (id))
 alter table account add constraint UK_66gkcp94endmotfwb8r4ocxm9 unique (account_number)
 alter table transaction add constraint FKa80kblc0ww9p9xjei8luheqlk foreign key (account_number) references account
-ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 5
-/*C13*/SET SCHEMA PUBLIC
+INSERT INTO ACCOUNT VALUES(1,'Current','1001',5000.00)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
+COMMIT
 drop table if exists account CASCADE 
 drop table if exists transaction CASCADE 
 drop sequence hibernate_sequence if exists
+DISCONNECT
+/*C13*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C14*/SET SCHEMA PUBLIC
 DISCONNECT
@@ -29,4 +32,3 @@ DISCONNECT
 DISCONNECT
 /*C21*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C12*/DISCONNECT
