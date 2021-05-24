@@ -1,7 +1,7 @@
 ## Project Description
 A Java Banking Application that can be used for:
-● Sending money between two predefined accounts with a positive starting balance  
-● Requesting account balance and list of transactions
+- Sending money between two predefined accounts with a positive starting balance
+- Requesting account balance and list of transactions
 
 
 ## Technology Used
@@ -29,5 +29,4 @@ src/test/java/com/drozdovas/banking/service/impl/
 ```
 
 ## Improvements
-● Create separate controllers and test cases for Statements and Transactions
-● Create separate controllers and test cases for Statements and Transactions
+- Create separate controllers and test cases for Statements and Transactions
